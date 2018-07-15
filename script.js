@@ -16,7 +16,7 @@ function error() {
     console.log('There was an error');
 }
 function weatherGeo(lat, long) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=Metric&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=Metric&appid=${apiKey}`;
     fetch(url)
         .then(res => res.json())
         .then((out) => {
@@ -29,7 +29,7 @@ function weatherGeo(lat, long) {
 }
 let city;
 function weatherOfCity(city) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&appid=${apiKey}`;
     let dajweather = new Promise((resolve, reject) => {
         fetch(url)
             .then(res => res.json())
